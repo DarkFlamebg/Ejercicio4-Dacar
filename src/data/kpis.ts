@@ -1,12 +1,20 @@
-import { DollarSign, Percent, Receipt, ShoppingCart, Users } from "lucide-react";
+import { BatteryCharging, DollarSign, Percent, Receipt, ShoppingCart } from "lucide-react";
 import type { Kpi } from "../types";
 
-// Reemplazar valores con los de la tabla de referencia.
 export const kpis: Kpi[] = [
+  {
+    id: "baterias",
+    title: "Baterías vendidas",
+    value: 1248,
+    format: "number",
+    change: 8.2,
+    icon: BatteryCharging,
+    description: "Unidades de baterías vendidas durante el mes.",
+  },
   {
     id: "ventas",
     title: "Ventas totales",
-    value: 128450,
+    value: 275634.5,
     format: "currency",
     change: 12.5,
     icon: DollarSign,
@@ -14,37 +22,28 @@ export const kpis: Kpi[] = [
   },
   {
     id: "pedidos",
-    title: "Pedidos",
-    value: 1842,
+    title: "Pedidos realizados",
+    value: 1032,
     format: "number",
-    change: 8.2,
+    change: 6.1,
     icon: ShoppingCart,
-    description: "Número de órdenes completadas en el mes.",
+    description: "Número de órdenes realizadas en el mes.",
   },
   {
     id: "ticket",
     title: "Ticket promedio",
-    value: 69.74,
+    value: 267.09,
     format: "currency",
-    change: -3.1,
+    change: 4.2,
     icon: Receipt,
     description: "Ventas totales divididas entre el número de pedidos.",
   },
   {
-    id: "clientes",
-    title: "Clientes nuevos",
-    value: 624,
-    format: "number",
-    change: 15.4,
-    icon: Users,
-    description: "Clientes que realizaron su primera compra este mes.",
-  },
-  {
     id: "conversion",
     title: "Tasa de conversión",
-    value: 3.8,
+    value: 3.75,
     format: "percent",
-    change: -1.2,
+    change: -0.4,
     icon: Percent,
     description: "Porcentaje de visitas que terminaron en una compra.",
   },
